@@ -1,0 +1,11 @@
+CONCEPT: quicksort is very similar to merge sort in that it uses a recursive, divide and conquer 
+approach. (NOTE: it IS possible to implement the quick sort algorithm iteratively.) The algorithm uses the range [p...r]
+with 'p' being the first index of the array(the '0th' index), and 'r' being the last index (array.length - 1). First,
+a 'partition point' is chosen, usually at the last index of the array. The Partition is compared with every other index
+of the array, with all of the values greater than it being placed on the right side of the partition value, and all of
+the lesser values being places on the left side, with the partition point eventually being placed in the center. 
+Although the rest of the array is not sorted, this GUARENTEES that the parition is in its final position, and is sorted.
+It is at this point that we reach the recursive portion of the algorithm. The quicksort method calls itself twice; once
+for the left side of the partition point, and once for the right side. New partition points are created recursively,
+with each call, until eventually all parts of the array are sorted. The 'base case' for this algorithm is reached
+when (!P<R) This is because through each call, the range gets smaller and smaller until P and R are both the same index.

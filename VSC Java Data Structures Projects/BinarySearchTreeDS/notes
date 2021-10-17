@@ -1,0 +1,34 @@
+***SIMILAR CONCEPT TO SUB AND SUPER CLASSES***
+
+Inserts data in a sorted manner so that it is easily searched for later, using the binary search algorithm.
+Unlike most of our previously studied data structures, this structure utilizes a non-sequential form of organization.
+
+Utilizes a tree structure which looks more like this:
+
+            O               <---- Non-Binary Tree, 'Branches' point downward
+          /   \                   each Node eventually pointing to the starting node or the 'root' of the tree.
+         O     O
+        /|\   / \                 Much like a linked-list, the binary search tree utilizes the Node class, which 
+       O O O O   O                recursively points to the 'next' and 'previous' nodes in the tree. By having the 
+                /                 location of any singular node in the tree, any other node can be found.
+               O
+
+ Nodes that do not have any 'children' (nodes which branch off it) are considered to be 'leaf nodes'. This tree is
+ considered non-binary because in a binary tree, nodes cannot exceed more than two children.
+
+            O               <---- Binary Search Tree Data Structure,, same concept as the non-binary tree, but
+SMALLER>   / \  <LARGER           each node can only have 0, 1, or 2 children. 
+          O   O                   When inserting a new node, we choose where to place the value by comparing it 
+         / \ / \                  to each value in the tree. if the value being inserted is greater than the node being 
+        O  O O  O                 compared, it moves to the right side of the tree. If it is less, it moves to the left
+       / \/ \  /                  side of the tree. This comparison process is repeated until the next position for
+      O  OO  OO                   the new value to move to is NULL.
+
+With this structure, any data on the LEFT side of the root is less, any data on the RIGHT side of the root is greater
+***DUPLICATE VALUES GO TO THE LEFT***
+
+
+Display Tree Notes:
+
+- Find the depth of the tree. This will help determine the formatting to display the tree
+- Find min and find max: whichever goes deeper is the depth of the tree

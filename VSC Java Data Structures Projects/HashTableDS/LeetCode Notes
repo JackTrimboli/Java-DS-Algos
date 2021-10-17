@@ -1,0 +1,20 @@
+SECTION 1 - INTRO:
+
+Two types of Hash Tables:
+1)Hash Set
+    >Implementation of the 'Set' data structure which stores no repeat values
+2)Hash Map
+    >Implementation of the 'Map' data structure which stores pairs (key, value)
+
+* can be imported and easily used through standard libaries *
+
+SECTION 2 - THE PRINCIPLE OF HASH TABLE:
+
+- key idea: map keys to buckets 
+    1) When inserting a new key, the hash func decides which bucket to assign the key to and stores it
+    2) When searching for a key, the hash table will use the SAME FUNCTION to find the corresponding bucket and search only in that bucket
+
+
+SECTION 3 - DESIGN A HASHTABLE:
+
+

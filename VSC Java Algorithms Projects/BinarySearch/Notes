@@ -1,0 +1,10 @@
+
+CONDITION: data must be sorted.
+
+Book Shelf Analogy: If we were performing a linear search, we would have to check each book in the shelf to 
+find the one we're looking for. In the case of a BINARY SEARCH, the books would be sorted. Then, we could (for example)
+search by the authors last name, making it much quicker. A binary search would start from the middle of the items
+(or in this case, bookshelf). In this example, lets say the authors name in the middle of the bookshelf started with 'U'.
+If we were looking for the author 'Shakespear', we could immediately ignore that whole second half of the shelf, 
+which would mean we only halve to search half as many items. Instead of the speed being linear O(n), it would instead be
+O(n/2).

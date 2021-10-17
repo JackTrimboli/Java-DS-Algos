@@ -1,0 +1,58 @@
+If a binary tree has a depth of four it should look like this:
+
+Numbers of Nodes that can exist on a line: n = number of nodes on the previous line  
+
+
+Ex:
+the depth is 4, so there can be up to 8 nodes on at the bottom of the tree
+depth of 5 would be 16 nodes
+
+The bottom of the tree (depth 5) would need 2 spaces between each nodes
+Depth 4 would need 4 spaces 
+Depth 3 would need 8 spaces
+Depth 2 would need 16 spaces
+the root would be 32 spaces
+
+
+
+so, the formula to get the num of nodes in a line would be [2 * (depth - 1)]
+
+
+
+
+
+
+ Node last = root;
+            Node current = root;
+
+            for(int i = 1; i < treeDepth; i++){ //This loop keeps track of what line we're on 
+                int nodesOnLine;
+                if(i == 1){
+                    nodesOnLine = 1;
+                }
+                else{
+                    nodesOnLine = (int)(Math.pow(2, (i - 1)));
+                }
+                System.out.println("\n");
+
+                for(int j = 0; j < nodesOnLine; j++){ //This loop prints each individual line, and doesn't exit until all the nodes on that line have been printed
+                    //Determine the white space that will be needed between each node
+                    for(int k = 0; k < whiteSpace; k++){
+                        System.out.print(" ");
+                    }
+                    if(i == 0){
+                        System.out.print(root.key);
+                    }
+                    else{ //In this case, the root has been printed and we are at least on the second line, from left to right, print the rest of the tree
+                    
+                    }
+                }
+                whiteSpace /= 2; //Spacing halves for the next loop, because as the nodes increase the spacing must decrease
+            }
+            
+        }
+
+
+
+
+
